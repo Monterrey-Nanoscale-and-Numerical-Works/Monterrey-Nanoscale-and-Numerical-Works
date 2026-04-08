@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>MNNW</title>
-  <meta name="description" content="Equipment for Semiconductor Fabrication">
+  <meta name="description" content="Mask optimization and photolithography equipment research in Monterrey, México">
   <link rel="canonical" href="https://photolithography.tech">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="icon.svg">
@@ -11,8 +11,8 @@
   <!-- Facebook Meta Tags -->
   <meta property="og:url" content="https://photolithography.tec">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Monterrey Numerical and Nanoscale Works">
-  <meta property="og:description" content="Equipment for Semiconductor Fabrication">
+  <meta property="og:title" content="Monterrey Nanoscale and Numerical Works">
+  <meta property="og:description" content="Mask optimization and photolithography equipment research in Monterrey, México">
   <meta property="og:image" content="https://photolithography.tech/preview.jpg">
 
   <!-- Twitter Meta Tags -->
@@ -20,8 +20,8 @@
   <meta name="twitter:site" content="@ssi">
   <meta property="twitter:domain" content="photolithography.tech">
   <meta property="twitter:url" content="https://photolithography.tech">
-  <meta name="twitter:title" content="Monterrey Numerical and Nanoscale Works">
-  <meta name="twitter:description" content="Equipment for Semiconductor Fabrication">
+  <meta name="twitter:title" content="Monterrey Nanoscale and Numerical Works">
+  <meta name="twitter:description" content="Mask optimization and photolithography equipment research in Monterrey, México">
   <meta name="twitter:image" content="https://photolithography.tech/preview.jpg">
 
   <style>
@@ -32,25 +32,34 @@
       font-style: normal;
     }
 
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: sans-serif;
       line-height: 1.4;
       font-size: 16px;
-      padding: 0 10px;
-      margin: 50px auto;
-      max-width: 650px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      box-sizing: border-box;
+      padding: 0 20px;
     }
 
     #main {
       max-width: 42em;
-      margin: 100 auto;
+      width: 100%;
     }
 
     #logo {
       font-family: 'SquarishSans', Arial, sans-serif;
       font-size: 56px;
       letter-spacing: -8px;
-      margin-left: -6px;
+      margin: 0 0 2px -6px;
     }
 
     .letter {
@@ -65,12 +74,46 @@
     }
 
     #name {
-      top: -8px;
+      display: block;
+      margin-top: -4px;
     }
 
-    #header {}
+    p {
+      color: #222;
+      margin: 0.4em 0;
+    }
 
-    #footer {}
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #888;
+      margin-top: 1.2em;
+      margin-bottom: 4px;
+    }
+
+    ul {
+      margin: 0 0 0 1.2em;
+      padding: 0;
+    }
+
+    ul li {
+      margin-bottom: 4px;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    #header {
+      margin-bottom: 1em;
+    }
+
+    #footer {
+      margin-top: 1.5em;
+      border-top: 1px solid #ddd;
+      padding-top: 0.75em;
+    }
   </style>
 </head>
 
@@ -86,12 +129,41 @@
       </h2>
       <span id="name"><b>Monterrey Nanoscale and Numerical Works</b></span>
     </div>
-    <br />
-    <p>Building photolithography equipment in Northeastern Mexico</p>
-    <br />
+    <p>
+      We develop photolithography equipment and computational tools for mask optimization
+      in step-and-scan architectures, from mature DUV nodes to leading-edge EUV.
+    </p>
+
+    <p class="section-label">Focus</p>
+    <ul>
+      <li><b>Reticle optimization</b> — computational correction of mask patterns to compensate
+          for diffraction, lens aberrations, and stage-induced overlay error at the exposure field.</li>
+      <li><b>Trajectory generation</b> — higher-order motion profiles for wafer and reticle stages
+          that minimize residual vibration and shorten settling time, increasing throughput
+          without degrading critical-dimension fidelity.</li>
+    </ul>
+
+    <p class="section-label">Context</p>
+    <p>
+      Monterrey sits at the center of a growing semiconductor supply chain in northeastern
+      México, with automotive, industrial, and power-management demand driving sustained
+      volume across a wide range of nodes. MNNW was founded to bring locally developed
+      equipment and optimization capability to that ecosystem — a region where access to
+      specialized tooling and the expertise to adapt it has historically been limited.
+    </p>
+
+    <p class="section-label">Research</p>
+    <p>
+      The throughput–precision trade-off in step-and-scan systems is governed by how
+      aggressively the stage can be moved between exposures. Recent work in the field
+      has converged on adaptive control and higher-order input shaping as the most
+      productive approaches to that problem. Our mask optimization pipeline is designed
+      around the overlay error budgets that result from those trajectory constraints —
+      so that reticle corrections remain valid even as scanner throughput increases.
+    </p>
+
     <div id="footer">
       <p><a href="mailto:roberto@photolithography.tech">Roberto Treviño</a></p>
-      <p>June 1, 2025</p>
     </div>
   </div>
 </body>
