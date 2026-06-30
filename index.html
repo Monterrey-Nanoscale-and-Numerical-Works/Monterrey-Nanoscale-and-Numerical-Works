@@ -218,6 +218,24 @@
       <p><a href="mailto:roberto@photolithography.tech">Roberto Treviño</a></p>
     </div>
   </div>
+  <script>
+    (function () {
+      function alignW() {
+        var el = document.querySelector('.rotate');
+        if (!el) return;
+        var fs = parseFloat(getComputedStyle(el).fontSize);
+        var ctx = document.createElement('canvas').getContext('2d');
+        ctx.font = 'normal ' + fs + 'px SquarishSans, Arial, sans-serif';
+        var m = ctx.measureText('M');
+        // fontBoundingBoxAscent = browser's actual ascender (typo or hhea, whichever it uses for layout)
+        // actualBoundingBoxAscent = visual cap height of the glyph
+        // pivot = midpoint between cap top and baseline, in element coordinates
+        var pivot = m.fontBoundingBoxAscent - m.actualBoundingBoxAscent / 2;
+        el.style.transformOrigin = '50% ' + pivot.toFixed(1) + 'px';
+      }
+      document.fonts ? document.fonts.ready.then(alignW) : window.addEventListener('load', alignW);
+    }());
+  </script>
 </body>
 
 </html>
