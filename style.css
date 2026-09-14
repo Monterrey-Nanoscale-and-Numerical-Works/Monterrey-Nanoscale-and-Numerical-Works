@@ -1,0 +1,173 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Public Sans', sans-serif;
+  line-height: 1.5;
+  font-size: 14px;
+  color: #222;
+  display: flex;
+  min-height: 100dvh;
+  box-sizing: border-box;
+  padding: 4vh 24px;
+}
+
+#main {
+  width: 80%;
+  max-width: 900px;
+  margin: auto;
+}
+
+a {
+  color: #0A84FF;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #076ad1;
+}
+
+/* Homepage masthead */
+
+#header {
+  text-align: center;
+  padding-bottom: 1.2em;
+  margin-bottom: 1.2em;
+  border-bottom: 1px solid #ddd;
+}
+
+#logo {
+  height: 2.2em;
+  width: auto;
+  display: block;
+  margin: 0 auto 0.6em;
+}
+
+#name {
+  display: block;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #111;
+  font-size: 0.95em;
+}
+
+#tagline {
+  display: block;
+  color: #888;
+  font-size: 0.8em;
+  margin-top: 0.3em;
+}
+
+/* Homepage directory */
+
+#directory {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em 2em;
+  padding-bottom: 1.2em;
+  margin-bottom: 1.2em;
+  border-bottom: 1px solid #ddd;
+}
+
+#directory a {
+  font-size: 1.05em;
+  font-weight: 700;
+  color: #0A84FF;
+}
+
+.about-blurb {
+  text-align: center;
+  color: #666;
+  font-size: 0.8em;
+  margin: 0 0 1.2em;
+  white-space: nowrap;
+}
+
+/* Sub-page header (back link + title) */
+
+#subheader {
+  padding-bottom: 1.2em;
+  margin-bottom: 1.2em;
+  border-bottom: 1px solid #ddd;
+}
+
+.back {
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+#subheader h1 {
+  font-size: 1.15em;
+  font-weight: 700;
+  color: #111;
+  margin: 0.5em 0 0;
+}
+
+.content p {
+  margin: 0.4em 0;
+}
+
+.signoff {
+  text-align: right;
+  margin-top: 1em;
+}
+
+.content ul {
+  margin: 0.4em 0 0.4em 1.2em;
+  padding: 0;
+}
+
+.content li {
+  margin-bottom: 0.9em;
+}
+
+.muted {
+  color: #888;
+}
+
+/* Shared footer */
+
+#footer {
+  margin-top: 1.2em;
+  padding-top: 1em;
+  border-top: 1px solid #ddd;
+}
+
+.copyright {
+  font-size: 0.75em;
+  color: #888;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  body {
+    line-height: 1.4;
+    padding: 20px 18px;
+  }
+
+  #main {
+    width: 100%;
+  }
+
+  #logo {
+    height: 1.8em;
+  }
+
+  #header, #directory, #subheader {
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+  }
+
+  #directory {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-blurb {
+    white-space: normal;
+  }
+}

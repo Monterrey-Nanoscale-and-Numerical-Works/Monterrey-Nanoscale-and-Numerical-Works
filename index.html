@@ -8,6 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="icon.svg">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
   <!-- Facebook Meta Tags -->
   <meta property="og:url" content="https://photolithography.tec">
   <meta property="og:type" content="website">
@@ -23,220 +28,33 @@
   <meta name="twitter:title" content="Monterrey Nanoscale and Numerical Works">
   <meta name="twitter:description" content="Mask optimization and photolithography equipment research in Monterrey, México">
   <meta name="twitter:image" content="https://photolithography.tech/preview.jpg">
-
-  <style>
-    @font-face {
-      font-family: 'SquarishSans';
-      src: url('./Squarish Sans CT Regular.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-      ascent-override: 76.171875%;
-      descent-override: 23.828125%;
-      line-gap-override: 0%;
-    }
-
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: sans-serif;
-      line-height: 1.4;
-      /* Comfortable on normal windows (~16-17px); shrinks toward the 13px floor
-         only on short windows so the block still fits without scrolling. */
-      font-size: clamp(13px, 1.75vh, 17px);
-      display: flex;
-      min-height: 100dvh;
-      box-sizing: border-box;
-      padding: 3vh 20px;
-    }
-
-    /* margin:auto centers on both axes, but — unlike align-items/justify-content
-       center — it never clips: if content is taller than the viewport it falls
-       back to top-aligned and the page scrolls, so nothing hides behind the
-       browser chrome. Fixed px width keeps line-wrapping (and thus height) stable
-       as the font scales. */
-    #main {
-      width: 100%;
-      max-width: 672px;
-      margin: auto;
-    }
-
-    #logo {
-      font-family: 'SquarishSans', Arial, sans-serif;
-      font-size: 3.5em;
-      letter-spacing: -0.143em;
-      margin: 0 0 0.04em -0.107em;
-    }
-
-    .letter {
-      display: inline-block;
-    }
-
-    .rotate {
-      transform: scaleY(-1);
-    }
-
-    #name {
-      display: block;
-      margin-top: -0.25em;
-    }
-
-    p {
-      color: #222;
-      margin: 0.4em 0;
-    }
-
-    .section-label {
-      font-size: 0.6875em;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #888;
-      margin-top: 1.2em;
-      margin-bottom: 0.25em;
-    }
-
-    ul {
-      margin: 0 0 0 1.2em;
-      padding: 0;
-    }
-
-    ul li {
-      margin-bottom: 0.25em;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    #header {
-      margin-bottom: 1em;
-    }
-
-    #footer {
-      margin-top: 1.5em;
-      border-top: 1px solid #ddd;
-      padding-top: 0.75em;
-    }
-
-    @media (max-width: 640px) {
-      body {
-        /* On phones, scale by width (vw): the column is full-width so height is
-           driven by text width, not viewport height. Readable floor of 14px. */
-        font-size: clamp(14px, 4vw, 16px);
-        line-height: 1.3;
-        padding: 20px 18px 14px;
-      }
-
-      #logo {
-        font-size: 2.85em;     /* slightly tighter ratio than desktop's 3.5em */
-        letter-spacing: -0.13em;
-      }
-
-      #header {
-        margin-bottom: 0.7em;
-      }
-
-      p {
-        margin: 0.28em 0;
-      }
-
-      .section-label {
-        margin-top: 0.85em;
-      }
-
-      ul {
-        margin-left: 1em;
-      }
-
-      #footer {
-        margin-top: 1em;
-        padding-top: 0.5em;
-      }
-    }
-  </style>
 </head>
 
 
 <body>
   <div id="main">
     <div id="header">
-      <h2 id="logo">
-        <span class="letter">M</span>
-        <span class="letter">N</span>
-        <span class="letter">N</span>
-        <span class="letter rotate">M</span>
-      </h2>
-      <span id="name"><b>Monterrey Nanoscale and Numerical Works</b></span>
+      <img id="logo" src="logo.svg" alt="MNNW" width="165" height="32">
+      <span id="name">Monterrey Nanoscale and Numerical Works</span>
+      <span id="tagline">Monterrey, México</span>
     </div>
-    <p>
-      We develop photolithography equipment and computational tools for mask optimization
-      in step-and-scan architectures, from mature DUV nodes to leading-edge EUV.
-    </p>
 
-    <p class="section-label">Focus</p>
-    <ul>
-      <li><b>Reticle optimization</b> — computational correction of mask patterns to compensate
-          for diffraction, lens aberrations, and stage-induced overlay error at the exposure field.</li>
-      <li><b>Trajectory generation</b> — higher-order motion profiles for wafer and reticle stages
-          that minimize residual vibration and shorten settling time, increasing throughput
-          without degrading critical-dimension fidelity.</li>
-    </ul>
+    <div id="directory">
+      <a href="message.html">A Message from Roberto Treviño</a>
+      <a href="annual-reports.html">Annual Reports</a>
+      <a href="research.html">Research Articles</a>
+      <a href="media.html">Media</a>
+    </div>
 
-    <p class="section-label">Context</p>
-    <p>
-      Monterrey sits at the center of a growing semiconductor supply chain in northeastern
-      México, with automotive, industrial, and power-management demand driving sustained
-      volume across a wide range of nodes. MNNW was founded to bring locally developed
-      equipment and optimization capability to that ecosystem — a region where access to
-      specialized tooling and the expertise to adapt it has historically been limited.
-    </p>
-
-    <p class="section-label">Research</p>
-    <p>
-      The throughput–precision trade-off in step-and-scan systems is governed by how
-      aggressively the stage can be moved between exposures. Recent work in the field
-      has converged on adaptive control and higher-order input shaping as the most
-      productive approaches to that problem. Our mask optimization pipeline is designed
-      around the overlay error budgets that result from those trajectory constraints —
-      so that reticle corrections remain valid even as scanner throughput increases.
-    </p>
+    <p class="about-blurb">Monterrey Nanoscale and Numerical Works (MNNW) builds computational
+      models that improve semiconductor manufacturing technology.</p>
 
     <div id="footer">
-      <p><a href="mailto:roberto@photolithography.tech">Roberto Treviño</a></p>
+      <p class="copyright">© <span id="year"></span> MNNW — Monterrey Nanoscale and Numerical Works</p>
     </div>
   </div>
   <script>
-    (function () {
-      // The reflected M (scaleY(-1)) must pivot about the midpoint between the
-      // glyph's cap-top and the text baseline so it lands on the same baseline as
-      // M N N. Rather than COMPUTE the baseline from font metrics (Safari only
-      // honors @font-face ascent-override since v17, so that drifts), we MEASURE
-      // where the browser actually put it: a zero-height inline-block aligned to
-      // the baseline has its top edge exactly on the baseline. Cap height is taken
-      // from the real glyph geometry (M bbox yMax 1100 / unitsPerEm 2048).
-      var CAP_EM = 1100 / 2048;
-      function alignW() {
-        var logo = document.getElementById('logo');
-        var el = logo && logo.querySelector('.rotate');
-        if (!el) return;
-        el.style.transform = 'none'; // getBoundingClientRect includes transforms; reset first
-        var mark = document.createElement('span');
-        mark.style.cssText = 'display:inline-block;width:0;height:0;vertical-align:baseline';
-        logo.appendChild(mark);
-        var baselineY = mark.getBoundingClientRect().top; // == the line's baseline
-        var boxTop = el.getBoundingClientRect().top;
-        logo.removeChild(mark);
-        var fs = parseFloat(getComputedStyle(el).fontSize);
-        var pivot = (baselineY - boxTop) - CAP_EM * fs / 2; // midpoint of cap-top..baseline
-        el.style.transform = 'scaleY(-1)';
-        el.style.transformOrigin = '50% ' + pivot.toFixed(2) + 'px';
-      }
-      document.fonts ? document.fonts.ready.then(alignW) : window.addEventListener('load', alignW);
-      window.addEventListener('resize', alignW); // font-size changes at the 640px breakpoint
-    }());
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 
