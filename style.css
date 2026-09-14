@@ -52,7 +52,8 @@ a:hover {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #111;
-  font-size: 0.95em;
+  font-size: min(0.95em, calc(3.2vw - 1px));
+  white-space: nowrap;
 }
 
 #tagline {
@@ -169,5 +170,6 @@ a:hover {
 
   .about-blurb {
     white-space: normal;
+    font-size: min(0.8em, calc(2.7vw - 1px));
   }
 }
